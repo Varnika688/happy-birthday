@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card-container">
+        <!-- Scene 1: The Envelope -->
+        <div id="scene1" class="scene active">
+            <div class="envelope" onclick="nextScene()">
+                <div class="heart">❤️</div>
+            </div>
+            <p class="instruction">Tap the heart to open your surprise!</p>
+        </div>
+
+        <!-- Scene 2: The Cute Cake Animation -->
+        <div id="scene2" class="scene">
+            <h1 class="title">Happy Birthday! 🎂</h1>
+            <div class="cake">
+                <div class="candle">
+                    <div class="flame" id="flame"></div>
+                </div>
+                <div class="frosting"></div>
+            </div>
+            <button class="btn" onclick="blowCandle()">Make a wish & Blow!</button>
+        </div>
+            <div class="confetti-container" id="confetti"></div>
+            <h2 class="message-title">To Someone Special ✨</h2>
+            <p class="birthday-text">May your day be filled with lots of smiles, love, and cake. You deserve the absolute best!</p>
+            <div class="cute-gif">
+                <!-- Replace with your own cute GIF or Image link -->
+                <img src="https://giphy.com" alt="Cute Celebration">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
