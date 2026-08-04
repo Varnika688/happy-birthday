@@ -1,0 +1,39 @@
+:root{
+  --bg:#fff8f2;
+  --card:#fff;
+  --accent:#ff6b81;
+  --accent-2:#ffd54f;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+body{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff8f2 0%,#ffeef5 100%);}
+.card-container{width:900px;max-width:95%;background:var(--card);border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,0.08);position:relative;overflow:hidden}
+.scene{display:none;align-items:center;flex-direction:column;justify-content:center;text-align:center;padding:24px}
+.scene.active{display:flex}
+.envelope{width:220px;height:140px;background:linear-gradient(180deg,#ffdede,#fff);border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:4px solid #ffdede;transform-origin:center;transition:transform .35s ease}
+.envelope:active{transform:scale(.98)}
+.heart{font-size:48px}
+.instruction{color:#666;margin-top:12px}
+.title{font-size:40px;margin:8px 0}
+.cake{width:200px;height:140px;background:linear-gradient(180deg,#f2cbd3,#ffdfe6);border-radius:12px;position:relative;display:flex;align-items:flex-start;justify-content:center;margin:12px 0}
+.candle{width:14px;height:54px;background:#fff;border-radius:6px;position:absolute;top:-26px;display:flex;align-items:flex-start;justify-content:center}
+.flame{width:18px;height:18px;background:radial-gradient(circle at 30% 30%,#fff1a8 0,#ffd54f 35%,#ff6b81 100%);border-radius:50%;box-shadow:0 0 12px rgba(255,107,129,.8);animation:flicker 900ms infinite}
+@keyframes flicker{0%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(.95)}100%{transform:translateY(0) scale(1)}}
+.frosting{width:140px;height:40px;background:linear-gradient(180deg,#fff,#ffe6f0);border-radius:20px;position:absolute;bottom:10px}
+.btn{background:var(--accent);color:white;border:none;padding:10px 16px;border-radius:10px;font-weight:600;cursor:pointer;margin-top:10px}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.confetti-container{position:absolute;inset:0;pointer-events:none}
+.message{padding:14px 10px}
+.message-title{margin:8px 0;color:#333}
+.birthday-text{color:#555;max-width:70%;margin:6px auto}
+.cute-gif img{max-width:180px;border-radius:10px;display:block;margin:12px auto}
+.controls{display:flex;gap:8px;justify-content:center;margin-top:12px}
+
+/* confetti pieces */
+.confetti{position:absolute;width:10px;height:14px;opacity:0.95;border-radius:2px;transform-origin:center}
+
+/* small responsive tweaks */
+@media (max-width:520px){.cake{width:140px;height:100px}.title{font-size:28px}}
+
+/* Recording indicator */
+.recording{box-shadow:0 0 0 6px rgba(255,107,129,0.08) inset}
